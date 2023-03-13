@@ -1,0 +1,67 @@
+{
+  "name": "chatsooner",
+  "version": "0.1.3-development",
+  "description": "The official Chatsooner JS package",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/types/index.d.ts",
+        "default": "./lib/esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/cjs/types/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "types": "./lib/cjs/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "test": "mocha",
+    "semantic-release": "semantic-release",
+    "prepack": "npm run build"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BossBuusMuus/chatsooner-js.git"
+  },
+  "keywords": [
+    "chatsooner"
+  ],
+  "author": "Brandon Musa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BossBuusMuus/chatsooner-js/issues"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@types/animejs": "^3.1.7",
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "semantic-release": "^19.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "mathjs": "^11.3.1",
+    "pixi.js": "^7.1.4"
+  }
+}

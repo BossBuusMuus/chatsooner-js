@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strictNullChecks":false,
+    "noImplicitThis": false,
+    "allowJs": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "files": ["../src/index.ts"]
+}
