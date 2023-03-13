@@ -9,6 +9,7 @@ The official Chatsooner Javascript package is here!
 ## Quick Start
 
 2. ```javascript
+
 import Visualizer from 'chatsooner'
 import VisualizerContext from 'chatsooner/lib/cjs/types/VisualizerContext'
 
