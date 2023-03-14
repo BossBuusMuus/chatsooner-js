@@ -40,5 +40,13 @@ interface VisualizerContext {
 ```
 
 
-### Testing
+Subsequent calls to 
+
+``` 
+visualizer.setContext(context) 
+```
+
+creates children on the first `setContext(context)`
+
+To get the current context call `getContext()`
 
