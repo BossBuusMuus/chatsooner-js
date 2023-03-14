@@ -8,10 +8,11 @@ The official Chatsooner Javascript package is here!
 
 ## Quick Start
 
-2. ```javascript
+2. 
+
+```
 
 import Visualizer from 'chatsooner'
-import VisualizerContext from 'chatsooner/lib/cjs/types/VisualizerContext'
 
 interface VisualizerContext {
             type: string,
